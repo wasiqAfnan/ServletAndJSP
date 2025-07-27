@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        
+       body { font-family: sans-serif; padding: 20px; background: #f0f0f0; }
+        form { background: #fff; padding: 15px; border: 1px solid #ccc; width: 320px; margin: auto; }
+        label { display: block; margin-top: 10px; }
+        input, textarea, select { width: 100%; padding: 6px; margin-top: 5px; }
+        input[type="radio"], input[type="checkbox"] { width: auto; margin-right: 5px; }
+        input[type="submit"] {
+            background: #007bff; color: white; border: none; padding: 8px 12px;
+            cursor: pointer; margin-top: 15px;
+        }
+        
+    </style>
+</head>
+<body>
+
+<form action="FormServlet" method="post">
+    <h3>Registration Form</h3>
+
+    <label>Name:
+        <input type="text" name="name" required>
+    </label>
+
+    <label>Email:
+        <input type="email" name="email" required>
+    </label>
+
+    <label>Password:
+        <input type="password" name="password" required>
+    </label>
+
+    <label>Gender:
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female" required> Female
+    </label>
+
+    <label>Country:
+        <select name="country" required>
+            <option value="" disabled selected>Select your country</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Other">Other</option>
+        </select>
+    </label>
+
+    <label>Message:
+        <textarea name="message" rows="3" required></textarea>
+    </label>
+
+    <label>
+        <input type="checkbox" name="terms" value="accepted" required>
+        I accept the Terms & Conditions
+    </label>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
